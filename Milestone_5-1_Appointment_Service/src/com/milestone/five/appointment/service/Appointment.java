@@ -22,18 +22,12 @@ public class Appointment {
 	private String _apptDescription;
 	
 	public Appointment(String id, Date date, String description) {
-		Date today = new Date();
-		System.out.println("Today's date is: " + today);
-		
 		if (id == null || id.length() >  10) {
 			throw new IllegalArgumentException("Invalid ID");
-			
 		}
-		
-		if (date == null || date.before(today)) {
+		if (date == null || date.before(new Date())) {
 			throw new IllegalArgumentException("Invalid Appointmene Date");
 		}
-		
 		if (description == null || description.length() > 50) {
 			throw new IllegalArgumentException("Invalid Description");
 		}
@@ -45,20 +39,19 @@ public class Appointment {
 	
 	// getters
 	
-	public String getID() {
+	public String GetID() {
 		return _apptID;
 	}
-	public Date getApptDate() {
+	public Date GetApptDate() {
 		return _apptDate;
 	}
-	public String getDescription() {
+	public String GetDescription() {
 		return _apptDescription;
 	}
 	
 	// setters, error checking included
 	public void SetApptDate(Date date) {
-		Date today = new Date();
-		if (date == null || date.before(today)) {
+		if (date == null || date.before(new Date())) {
 			throw new IllegalArgumentException("Invalid Appointmene Date");
 		}
 		_apptDate = date;

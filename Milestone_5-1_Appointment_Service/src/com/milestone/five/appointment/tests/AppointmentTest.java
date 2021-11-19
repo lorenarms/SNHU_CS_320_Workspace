@@ -2,6 +2,7 @@ package com.milestone.five.appointment.tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import org.junit.jupiter.api.Assertions;
@@ -13,8 +14,15 @@ class AppointmentTest {
 
 	@Test
 	void testApptConstructor() {
-		Date date = new Date();
-		date.setTime(15680);
+		Calendar c = Calendar.getInstance();
+		c.set(2022, 10, 5, 9, 15);
+		Date date = c.getTime();
+		
+		
+		//Date date = new Date(2022, 1, 10);
+		System.out.println("Date set to " + date);
+		
+		
 		
 		//id too long
 		Assertions.assertThrows(IllegalArgumentException.class, () ->{
@@ -26,8 +34,8 @@ class AppointmentTest {
 		});
 		//description too long
 		Assertions.assertThrows(IllegalArgumentException.class, () ->{
-			new Appointment("1234567890", date , "This is a description "
-					+ "that is way too long to be valid for this constructor");
+			new Appointment("1234567890", date , "Thisisadescription"
+					+ "thatiswaytoolongtobevalidforthisconstructor");
 		});
 		//description null
 		Assertions.assertThrows(IllegalArgumentException.class, () ->{
@@ -39,15 +47,60 @@ class AppointmentTest {
 		});
 		//date before today
 		
-		date.setTime(-16680);
+		date.setTime(0);
+		System.out.println("Date set to " + date);
 		Assertions.assertThrows(IllegalArgumentException.class, () ->{
-			new Appointment("12345678901", date , "Appt Description");
+			new Appointment("1234567890", date , "Appt Description");
 		});
 		
 		//everything correct
-		date.setTime(20690);
+		Date newDate = c.getTime();
+		Appointment appt = new Appointment("1234567890", newDate, "Appt Description");
+		assertTrue(appt.GetID().equals("1234567890"));
+		assertTrue(appt.GetApptDate().equals(newDate));
+		assertTrue(appt.GetDescription().equals("Appt Description"));
+		
+	}
+	
+	@Test
+	void testSetters() {
+		Calendar c = Calendar.getInstance();
+		c.set(2022, 10, 5, 9, 15);
+		Date date = c.getTime();
+		Date newDate = c.getTime();
+		Date badDate = new Date();
+		badDate.setTime(10000);
+		
+		// make object
 		Appointment appt = new Appointment("1234567890", date, "Appt Description");
-		assertTrue(appt.getID())
+		
+		// set new description
+		appt.SetApptDescription("This is a description");
+		// null description error
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			appt.SetApptDescription(null);
+		});
+		// long description error
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			appt.SetApptDescription("Thisdescriptionistoolongtobevalidandwillthrowanerror");
+		});
+		// check that description is changed
+		assertTrue(appt.GetDescription().equals("This is a description"));
+		
+		// date is before today
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			appt.SetApptDate(badDate);
+		});
+		// date is null
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			appt.SetApptDate(null);
+		});
+		
+		// date is appropriate
+		appt.SetApptDate(newDate);
+		// check that date changed
+		assertTrue(appt.GetApptDate().equals(newDate));
+		
 	}
 
 }
