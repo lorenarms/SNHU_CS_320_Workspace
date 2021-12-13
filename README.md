@@ -21,7 +21,7 @@
 <h3 style="background-color:DodgerBlue;">Final Reflections</h3>
 <p><ol>
   <li>How can I ensure that my code, program, or software is functional and secure?</li>
-    <ul><li><em>Answer</em></li></ul>
+    <ul><li><em>Call me old-school, but I still think manual review is just as important as automated testing. Don’t get me wrong, testing with plug-ins like JUnit or NUnit is incredibly helpful, and for this project was a key factor in producing clean, readable, functional code. However, I feel that manually reviewing your code in detail is just as important (not <b>more</b> important, mind you, but <b>as</b> important). The two should be used together to create your application / program. I like to follow my logic in my initial draft of code to see just how flawed it is. I have a tendency to just sit and write when the stakes aren’t super high, a habit I picked up from drafting papers in various English classes growing up, and only exacerbated by my previous work as a public-speaker where talking “off the cuff” was the norm. However, I also have the piece of mind to know that my first draft of code is <b>never</b> going to be perfect. Manual review before writing my tests ensures that major flaws are removed initially, and testing for more minor bugs can commence afterwards. </em></li></ul>
   <li>How do I interpret user needs and incorporate them into a program?</li>
     <ul><li><em>Answer</em></li></ul>
   <li>How do I approach designing software?</li>
