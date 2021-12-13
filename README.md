@@ -15,7 +15,18 @@
     <li>Analyze various approaches to software testing based on requirements</li>
     <li>Apply appropriate testing strategies to meet requirements</li>
   </ul>
-  
-  
-
 </p>
+
+
+<h3>Final Reflections</h3>
+<p><ul>
+  <li>How can I ensure that my code, program, or software is functional and secure?</li>
+  <li>How do I interpret user needs and incorporate them into a program?</li>
+  <li>How do I approach designing software?</li>
+  </ul>
+</p>
+
+
+    
+    
+    
