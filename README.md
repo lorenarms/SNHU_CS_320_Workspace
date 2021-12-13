@@ -17,7 +17,7 @@
   </ul>
 </p>
 
-
+<hr>
 <h3 style="background-color:DodgerBlue;">Final Reflections</h3>
 <p><ol>
   <li>How can I ensure that my code, program, or software is functional and secure?</li>
