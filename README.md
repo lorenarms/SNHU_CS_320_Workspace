@@ -9,7 +9,7 @@
 <p>Develop a mobile application by delivering the contact, task, and appointment services, and provide unit tests to verify that the application meets the requirements. In this project, you will demonstrate your mastery of the following competency:
 <ul><li>Create unit tests using code to uncover errors</li></ul> </p>
 
-<h3 style="background-color:DodgerBlue;">Project Two</h3>
+<h3>Project Two</h3>
 <p>Create a follow-up summary and reflections <a href="https://docs.google.com/document/d/1yv3aK2w6YDvOMk-B_yZj1mWrZAp5FfN1iaz3nph_4rg/edit?usp=sharing" target="_blank">report</a> to explain the analysis of various approaches to software testing based on requirements and the application of appropriate testing strategies to meet requirements while developing the mobile application. In this project, you will demonstrate your mastery of the following competencies:
   <ul>
     <li>Analyze various approaches to software testing based on requirements</li>
@@ -18,7 +18,7 @@
 </p>
 
 
-<h3>Final Reflections</h3>
+<h3 style="background-color:DodgerBlue;">Final Reflections</h3>
 <p><ul>
   <li>How can I ensure that my code, program, or software is functional and secure?</li>
   <li>How do I interpret user needs and incorporate them into a program?</li>
